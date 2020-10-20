@@ -11,5 +11,6 @@ Last Edited: 10/13/2020
 //static string hero;
 //static int hmove;
 static int movehold;
+int health;
 int moveHero();
 #endif

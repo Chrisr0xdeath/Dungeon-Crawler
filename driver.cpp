@@ -13,8 +13,6 @@ Last Edited: 10/13/2020
 //NAMESPACES
 using namespace std;
 
-
-
 int main() {
 	bool won = false;
 	col = 25;
@@ -25,6 +23,8 @@ int main() {
 	fillMap();
 	printMap();
 	while (won != true) {
+		cout << "Please move up, down, left, or right with the corresponding keys:   n, e, s, w" << endl;
+		cout << "Hero Health: " + health << endl;
 		movehold = moveHero();
 		hprintMap(movehold);
 	}

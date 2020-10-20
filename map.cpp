@@ -15,6 +15,7 @@ using namespace std;
 string map[25][25];
 string cell = "[]";
 string hcell = "[XD]";
+string scell = "[x]";
 int hcol = 0;
 int hrow = 0;
 /*void getMapSize() {
@@ -25,8 +26,8 @@ int hrow = 0;
 }*/
 void hprintMap(int x) {
 	if (x == 1) {
-		if (hrow != 0) {
-			hrow = hrow - 1;
+		if (hrow > 0) {
+			hrow--;
 			fillHMap(hrow, hcol);
 		}
 		else {
@@ -35,8 +36,8 @@ void hprintMap(int x) {
 		}
 	}
 	else if (x == 2) {
-		if (hcol != 0) {
-			hcol = hcol - 1;
+		if (hcol > 0) {
+			hcol--;
 			fillHMap(hrow, hcol);
 		}
 		else {
@@ -45,8 +46,8 @@ void hprintMap(int x) {
 		}
 	}
 	else if (x == 3) {
-		if (hrow != 25) {
-			hrow = hrow + 1;
+		if (hrow < 25) {
+			hrow++;
 			fillHMap(hrow, hcol);
 		}
 		else {
@@ -55,8 +56,8 @@ void hprintMap(int x) {
 		}
 	}
 	else if (x == 4) {
-		if (hcol != 25) {
-			hcol = hcol + 1;
+		if (hcol < 25) {
+			hcol++;
 			fillHMap(hrow, hcol);
 		}
 		else {
